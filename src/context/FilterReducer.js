@@ -12,7 +12,12 @@ export const FilterReducer = (state,action) => {
     case "Filter_by_Search":
         return{...state,searchItem: action.payload};
     case "Clear_Filters":
-        return{...state};
+        return{
+            byStock : false,
+            byFastDelivery: false,
+            byRating: 0,
+            searchItem: ""
+        };
     default:
         return state;
   }

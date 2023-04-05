@@ -15,7 +15,7 @@ export const FilterItems = () => {
               name="order"
               type="radio"
               id={`inline-1`}
-              onChange={() => FilterDispatch({type: "Sort_By_Price",payload: "asc"})}
+              onChange={() => FilterDispatch({type: "Sort_by_Price",payload: "asc"})}
               checked={sort === "asc" ? true : false}
             />
         </span>
@@ -26,7 +26,7 @@ export const FilterItems = () => {
               name="order"
               type="radio"
               id={`inline-2`}
-              onChange={() => FilterDispatch({type: "Sort_By_Price",payload: "desc"})}
+              onChange={() => FilterDispatch({type: "Sort_by_Price",payload: "desc"})}
               checked={sort === "desc" ? true : false}
             />
         </span>
