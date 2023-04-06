@@ -22,17 +22,17 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{height: 60,marginBottom: 10}}>
         <Container>
             <Navbar.Brand>
-                <Link to = "/" style={{fontSize: 30}}>Shopping Cart</Link>
+                <Link to = "/Shopping-Cart" style={{fontSize: 30}}>Shopping Cart</Link>
             </Navbar.Brand>
             {useLocation().pathname.split("/")[1] !== "cart" && (
-                <Navbar.Text className="searchbar">
-                    <FormControl 
-                        placeholder = "Search the Products..."
-                        style = {{width : 500}}
-                        className = "m-auto"
-                        onChange={(e) => {FilterDispatch({type: "Filter_by_Search",payload: e.target.value})}}
-                    />
-                </Navbar.Text>
+            <Navbar.Text className="searchbar">
+                <FormControl 
+                    placeholder = "Search the Products..."
+                    style = {{width : 500}}
+                    className = "m-auto"
+                    onChange={(e) => {FilterDispatch({type: "Filter_by_Search",payload: e.target.value})}}
+                />
+            </Navbar.Text>
             )}
             <Nav>
                 <Dropdown align={{ sm:"right" }}>
