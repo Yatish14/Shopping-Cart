@@ -9,3 +9,12 @@
     padding: 10px;
     width: 80%;
 }
+
+@media (max-width: 771px)
+{
+    .cardItem
+    {
+        width: 58%;
+        padding: 0;
+    }
+}
