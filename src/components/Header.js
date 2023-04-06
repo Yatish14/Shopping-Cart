@@ -11,7 +11,7 @@ import
 from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { FaShoppingCart } from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/ContextAPI";
 import "./Header.css";
@@ -24,14 +24,16 @@ const Header = () => {
             <Navbar.Brand>
                 <Link to = "/" style={{fontSize: 30}}>Shopping Cart</Link>
             </Navbar.Brand>
-            <Navbar.Text className="searchbar">
-                <FormControl 
-                    placeholder = "Search the Products..."
-                    style = {{width : 500}}
-                    className = "m-auto"
-                    onChange={(e) => {FilterDispatch({type: "Filter_by_Search",payload: e.target.value})}}
-                />
-            </Navbar.Text>
+            {useLocation().pathname.split("/")[1] !== "cart" && (
+                <Navbar.Text className="searchbar">
+                    <FormControl 
+                        placeholder = "Search the Products..."
+                        style = {{width : 500}}
+                        className = "m-auto"
+                        onChange={(e) => {FilterDispatch({type: "Filter_by_Search",payload: e.target.value})}}
+                    />
+                </Navbar.Text>
+            )}
             <Nav>
                 <Dropdown align={{ sm:"right" }}>
                     <Dropdown.Toggle variant = "success">
