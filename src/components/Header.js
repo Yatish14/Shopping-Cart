@@ -24,7 +24,7 @@ const Header = () => {
             <Navbar.Brand>
                 <Link to = "/Shopping-Cart" style={{fontSize: 30}}>Shopping Cart</Link>
             </Navbar.Brand>
-            {useLocation().pathname.split("/")[1] !== "cart" && (
+            {useLocation().pathname!== "/Shopping-Cart/cart" && (
             <Navbar.Text className="searchbar">
                 <FormControl 
                     placeholder = "Search the Products..."
