@@ -22,7 +22,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{height: 60,marginBottom: 10}}>
         <Container>
             <Navbar.Brand>
-                <Link to = "/Shopping-Cart" style={{fontSize: 30}}>Shopping Cart</Link>
+                <Link to = "/" style={{fontSize: 30}}>Shopping Cart</Link>
             </Navbar.Brand>
             {useLocation().pathname!== "/Shopping-Cart/cart" && (
             <Navbar.Text className="searchbar">
